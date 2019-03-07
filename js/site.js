@@ -15,7 +15,6 @@ function confirm(event){
         {
           return false;
         } 
-        
         else 
         {
           fname = document.getElementById("fname").value;
