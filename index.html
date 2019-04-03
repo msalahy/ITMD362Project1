@@ -9,17 +9,17 @@ Written by Mohammad Salahy -->
   <head>
     <title> Heray Spice </title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" media="screen" href="resetCSS/reset.css" />
+    <link rel="stylesheet" media="screen" href="resetCSS/reset.css"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" media="screen" href="css/screen.css" />
     <link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Average" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
-    <script src="js/site.js" async></script>
+    <script src="js/site.js"></script>
   </head>
   <body>
     <main id="content">
-      <form id="clubinfo" method="get" action="#null" autocomplete="on">
+      <form id="clubinfo" class="form-container" name="myForm" method="post" onsubmit="return validateForm()" autocomplete="on" >
         <h1>Heray Spice:</h1>
         <h2>Family Owned Since 2002 </h2>
         <img id="logo" src="images/magiclogo2.jpg" alt="Heray Pictures">
@@ -28,24 +28,20 @@ Written by Mohammad Salahy -->
         </p>
         <ul>
           <li>
-            <label for="fname">FIRST NAME: </label>
-            <input type="text" id="fname" name="fname" placeholder="First Name" autocomplete="on"/>
-          </li>
-          <li>
-            <label for="lname">LAST NAME: </label>
-            <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="on"/>
+            <label for="fname">FULL NAME: </label>
+            <input type="text" name="name" id="name" class="icon-1" autocomplete="on">
           </li>
           <li>
             <label for="email">EMAIL: </label>
-            <input type="email" id="email" name="email" placeholder="Youremail@email.com" autocomplete="on"/>
+            <input type="text" name="email" id="email" class="icon-3" autocomplete="on">
           </li>
           <li class="list">
             <label> Are You Currnelty a Customer With Us ? </label>
-            <input type="radio" name="status" value="yes">YES
-            <input type="radio" name="status" value="no">NO
+            <input type="radio" name="status" value="yes"> YES
+            <input type="radio" name="status" value="no"> NO
           </li>
           <li>
-            <input type="submit" id="submit" value="Join Our Client List." onclick="confirm();"/>
+            <input type="submit" value="Submit" class="submit-btn">
           </li>
         </ul>
       </form>

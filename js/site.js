@@ -4,27 +4,32 @@ jQuery(function($) {
   $('html').addClass('hasjs');
 });
 
-document.getElementById("submit").addEventListener("click", confirm);
-
-function confirm(event){
-  for(var i = 0; i < document.getElementsByTagName("input").length; i++)
-  {
-    if(document.getElementsByTagName("input").item(i).value === "" ||
-        (document.getElementsByTagName("input").item(i).type === "radio") &&
-        (document.getElementsByTagName("input").item(i).checked === false))
-        {
-          return false;
-        } 
-        else 
-        {
-          fname = document.getElementById("fname").value;
-          lname = document.getElementById("lname").value;
-          
-          alert("Thank you " + fname + " " + lname + " for signing up for our newsletter!\n" +
-                "We will update you as sooon as new sales season starts. !");
-          return true;
-        }
-  }
+function validateForm() {
+var x = document.forms["myForm"]["name"].value;
+if (x == "") {
+alert("Name must be filled out");
+return false;
+}
+var x = document.forms["myForm"]["email"].value;
+if (x == "") {
+alert("Email Address must be filled out");
+return false;
+}
+var x = document.forms["myForm"]["email"].value;
+var atpos = x.indexOf("@");
+var dotpos = x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+alert("Not a valid e-mail address");
+return false;
+}
+var x = document.forms["myForm"]["message"].value;
+if (x == "") {
+alert("Message must be filled out");
+return false;
+}
+else{
+  submit.alert("Thank you for submit your information, we will update you on the next sales. ")
+}
 }
 
 
